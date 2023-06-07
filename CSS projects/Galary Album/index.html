@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galary Album</title>
+</head>
+
+<body>
+    <div class="kodfun-galeri">
+
+        <div style="background-image: url('img/kf1.jpg');"></div>
+        <div style="background-image: url('img/kf2.jpg');"></div>
+        <div style="background-image: url('img/kf3.jpg');"></div>
+        <div style="background-image: url('img/kf4.jpg');"></div>
+        <div style="background-image: url('img/kf5.jpg');"></div>
+
+    </div>
+
+    <style>
+        * {
+            background: #000;
+        }
+
+        .kodfun-galeri {
+            display: flex;
+            height: 20rem;
+            gap: 1rem
+        }
+
+        .kodfun-galeri>div {
+            flex: 1;
+            border-radius: 1rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            transition: all .8s cubic-bezier (.25, .4, .45, 1.4);
+        }
+
+        .kodfun-galeri>div:hover {
+            flex: 3;
+        }
+    </style>
+</body>
+
+</html>

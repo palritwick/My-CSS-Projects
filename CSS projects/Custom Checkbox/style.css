@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: white;
+}
+
+label {
+    position: relative;
+    font-size: 50px;
+    color: blueviolet;
+    cursor: pointer;
+}
+
+label input {
+    position: absolute;
+    opacity: 0;
+}
+
+.input-check {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    top: 5px;
+    margin-right: 5px;
+    border: 2px solid #ccc;
+    border-radius: 9px;
+    transition: 0.5s;
+}
+
+label input:checked~.input-check{
+    background: blueviolet;
+    border-color: blueviolet;
+    animation: animate 0.7s ease;
+    width: 65px;
+    height: 65px;
+}
+@keyframes animate{
+    0%{
+        transform: scale(1);
+    }
+    40%{
+        transform: scale(1.3) .7;
+    }
+    55%{
+        transform: scale(1);
+    }
+    70%{
+        transform: scale(1.2) .8;
+    }
+    80%{
+        transform: scale(1);
+    }
+    90%{
+        transform: scale(1.1) .9;
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.input-check::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 6px;
+    width: 39px;
+    height: 17px;
+    border-bottom: 9px solid #fff;
+    border-left: 9px solid #fff;
+    transform: scale(0) rotate(-45deg);
+    transition: 0.5s;
+}
+
+label input:checked~.input-check::before{
+    transform: scale(1) rotate(-45deg);
+}

@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    min-height: 100vh;
+    background: #222;
+}
+nav{
+    position: relative;
+    width: 505px;
+    height: 50px;
+    background: #000;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 30px;
+    left: 50px;
+}
+nav a{
+    display: inline-block;
+    position: relative;
+    color: white;
+    font-size: 1em;
+    text-decoration: none;
+    padding: 0 15px;
+    z-index: 1;
+}
+nav span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95px;
+    height: 100%;
+    background: linear-gradient(45deg,#2e3192,#1bffff);
+    border-radius: 8px;
+    transition: 0.5s ease;
+}
+nav a:nth-child(1):hover~span{
+    left: 0;
+}
+nav a:nth-child(2):hover~span{
+    left: 95px;
+}
+nav a:nth-child(3):hover~span{
+    left: 182px;
+    width: 110px;
+}
+nav a:nth-child(4):hover~span{
+    left: 274px;
+    width: 115px;
+}
+nav a:nth-child(5):hover~span{
+    left: 380px;
+    width: 125px;
+}

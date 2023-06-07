@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2b2b2b;
+    min-height: 100vh;
+}
+label{
+    width: 80px;
+    height: 80px;
+    background: #3a3a3a;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+input{
+    position: absolute;
+    opacity: 0;
+}
+.sun{
+    position: absolute;
+    font-size: 3em;
+    color: #666;
+    filter: drop-shadow(0 0 2px rgba(0 0 0 0.5));
+    transform: scale(0);
+    transition: 1s ease;
+    transition-delay: .8s;
+}
+input:checked~.sun{
+    transform: scale(1) rotate(360deg);
+}
+.moon{
+    font-size: 3em;
+    color: #666;
+    filter: drop-shadow(0 0 2px rgba(0 0 0 0.5));
+    transition: 1s ease;
+    transition-delay: .8s;
+}
+input:checked~.moon{
+    transform: rotate(360deg) scale(0);
+    transition-delay: 0s;
+}
+.toggle{
+    position: absolute;
+    display: block;
+    width: 80px;
+    height: 80px;
+    background: #2b2b2b;
+    border-radius: 50%;
+    box-sizing: 
+    inset 0 8px 60px rgba(0,0,0, .1)
+    inset 0 8px 8px rgba(0,0,0, .1)
+    inset 0 -4px 4px rgba(0,0,0, .1);
+    z-index: -1;
+}
+input:checked~.toggle{
+    background: #f0f0f0;
+}
+.animateBg{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #f0f0f0;
+    z-index: -2;
+    clip-path: circle(0% at 50% 50%);
+    transition: 1.5s ease-out;
+}
+input:checked~.animateBg{
+    clip-path: circle(150% at 50% 50%);
+}
